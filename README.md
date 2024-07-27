@@ -1,69 +1,36 @@
-# Useful-Tools
-Some useful tools
+# Process Text to Markdown
 
 ## Overview
-This repository contains a collection of useful tools for various tasks. Each tool is designed to be simple and effective for specific use cases.
 
-## Tools
+This Python script converts text files (`.txt`) into well-formatted Markdown files (`.md`). It normalizes line endings, replaces problematic characters, and beautifies the Markdown output to ensure readability and consistency. The script supports batch processing of files in a directory as well as single-file processing.
 
-### process_to_markdown
-This tool processes a text file to remove single line breaks while preserving double line breaks, and saves the output as a Markdown file.
+## Features
+
+- Normalizes line endings to LF.
+- Replaces problematic characters (e.g., Windows-1252 right single quotation mark).
+- Beautifies Markdown output by removing excessive line breaks, formatting long lines, and adding emphasis to uppercase phrases.
+- Supports processing of both single files and multiple files in a directory.
+- Outputs processed files with a `_processed` suffix by default.
 
 ## Installation
-To use `process_to_markdown`, you need to have Python installed on your system. Follow these steps to get started:
 
-1. Navigate to the directory containing the script.
-
-2. Make sure you have the required packages installed. If not, you can install `tkinter` using the following:
-    ```sh
-    sudo apt-get install python3-tk
-    ```
+Ensure you have Python 3.x installed on your system. You can download Python from [python.org](https://www.python.org/).
 
 ## Usage
-To use the `process_to_markdown` script, follow these steps:
 
-1. Navigate to the directory in Terminal:
-    ```sh
-    cd /path/to/Useful-Tools
-    ```
+1. **Run the script**:
 
-2. Run the script:
-    ```sh
-    python process_to_markdown_gui.py
-    ```
-    or
-    ```sh
-    python3 process_to_markdown_gui.py
-    ```
+```sh
+python process_to_markdown.py
+```
 
-3. Follow the prompts to select the input text file and specify the output Markdown file location and name.
+2. **Choose Processing Mode**:
+- **Process Directory**: Select a directory containing `.txt` or `.md` files to process. Specify an output directory where the converted files will be saved.
+- **Process Single File**: Select a single `.txt` or `.md` file to process. Choose the output file location for the converted Markdown file.
 
-## Example
-Here’s a brief example of how to use the `process_to_markdown` tool:
-
-1. Run the script:
-    ```sh
-    python process_to_markdown_gui.py
-    ```
-    or
-    ```sh
-    python3 process_to_markdown_gui.py
-    ```
-
-2. A file dialog will appear. Select the text file you want to process.
-
-3. Another file dialog will prompt you to choose the location and name for the output Markdown file.
-
-4. The script processes the file and saves the output as a Markdown file.
-
-## Contributing
-If you would like to contribute to this project, please fork the repository and submit a pull request. We welcome any improvements or additional tools you can provide.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-For any questions or suggestions, feel free to reach out to the repository owner at [your-email@example.com](mailto:your-email@example.com).
+3. **Processing Options**:
+- Files are processed to replace problematic characters and beautify Markdown.
+- Processed files are saved with a `_processed` suffix by default.
 
 ---
 
