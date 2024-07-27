@@ -8,6 +8,9 @@ def process_text_file_to_markdown(input_file, output_file):
 	with open(input_file, 'r', encoding='utf-8') as file:
 		content = file.read()
 		
+	# Normalize line endings to LF
+	content = content.replace('\r\n', '\n').replace('\r', '\n')
+	
 	# Step 1: Replace double line breaks with a unique marker
 	content = content.replace('\n\n', '__DOUBLE_NEWLINE__')
 	
@@ -25,7 +28,7 @@ def main():
 	root.withdraw()  # Hide the root window
 	
 	# Prompt the user to select a file
-	input_file = filedialog.askopenfilename(title="Select a text file", filetypes=[("Text files", "*.txt")])
+	input_file = filedialog.askopenfilename(title="Select a text or Markdown file", filetypes=[("Text files", "*.txt"), ("Markdown files", "*.md")])
 	if not input_file:
 		print("No file selected. Exiting...")
 		return
